@@ -1,0 +1,18 @@
+{
+  "recommendations": [
+    "editorconfig.editorconfig",
+    "dbaeumer.vscode-eslint",
+    "nuxt.mdc",
+    "cpreston321.nuxt-vscode",
+    "nuxtr.nuxt-vscode-extentions",
+    "willjleong.nuxt-typescript-snippets",
+    "nuxtr.nuxtr-vscode",
+    "esbenp.prettier-vscode",
+    "ban.spellright",
+    "bradlc.vscode-tailwindcss",
+    "gruntfuggly.todo-tree",
+    "vitest.explorer",
+    "vue.volar",
+    "redhat.vscode-yaml"
+  ]
+}

@@ -1,9 +1,10 @@
 <template>
   <UPageGrid>
-    <ULandingCard
+    <WorkCard
       icon="i-heroicons-swatch"
-      title="Color Palette"
-      description="Choose a primary and a gray color from your Tailwind CSS color palette."
+      company-name="Company example"
+      job-name="Design example"
+      starts-on="2022"
     />
     <ULandingCard
       icon="i-heroicons-wrench-screwdriver"
