@@ -1,25 +1,40 @@
 <template>
   <UPageGrid>
     <WorkCard
-      icon="i-heroicons-swatch"
-      company-name="Company example"
-      job-name="Design example"
-      starts-on="2022"
+      company-name="Philips"
+      job-name="Specialist FrontEnd Developer, Design Technologist & DesignOps"
+      starts-on="Nov 2022"
+      ends-on="Jan 2024"
     />
-    <ULandingCard
-      icon="i-heroicons-wrench-screwdriver"
-      title="Fully Customizable"
-      description="Change the style of any component in your App Config or with ui prop."
+    <WorkCard
+      company-name="Mercedes Benz Bank (via Capgemini)"
+      job-name="Senior FrontEnd Developer & Product Designer"
+      starts-on="Jun 2022"
+      ends-on="Nov 2022"
     />
-    <ULandingCard
-      icon="i-heroicons-face-smile"
-      title="Icons"
-      description="Choose any of the 100k+ icons from the most popular icon libraries."
+    <WorkCard
+      company-name="OWSE - Objects Web & Software Engineering"
+      job-name="Senior FrontEnd Developer"
+      starts-on="Apr 2021"
+      ends-on="Jan 2023"
     />
-    <ULandingCard
-      icon="i-heroicons-computer-desktop"
-      title="Keyboard Shortcuts"
-      description="Nuxt UI comes with a set of Vue composables to easily handle shortcuts."
+    <WorkCard
+      company-name="Bradesco (via Capgemini)"
+      job-name="Senior FrontEnd Developer & Product Designer"
+      starts-on="May 2021"
+      ends-on="Jun 2022"
+    />
+    <WorkCard
+      company-name="SAI Global"
+      job-name="Lead FrontEnd Developer & Product Designer"
+      starts-on="Jan 2017"
+      ends-on="Apr 2020"
+    />
+    <WorkCard
+      company-name="Modulo Security Solutions"
+      job-name="UI/UX Designer & FrontEnd Developer"
+      starts-on="Oct 2012"
+      ends-on="Dec 2016"
     />
   </UPageGrid>
 </template>

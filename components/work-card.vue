@@ -6,22 +6,32 @@
     orientation="vertical"
     class="work-card"
   >
-    <template #icon>
-      <UAvatar
-        src="https://avatars.githubusercontent.com/u/739984?v=4"
-        :alt="companyName"
-      />
+    <template v-if="companyLogo" #icon>
+      <UAvatar :alt="companyName" :title="companyName" />
     </template>
 
-    <template #default>
-      <div class="work-card_content">{{ startsOn }} - {{ endsOn }}</div>
-
-      <div v-if="projectName" class="work-card_footer">
-        <NuxtLink :to="`/project/${projectName}`">
-          {{ projectName }}
-        </NuxtLink>
-      </div>
+    <template #title>
+      <p class="text-gray-900 dark:text-white text-base font-bold text-wrap">
+        {{ jobName }}
+      </p>
     </template>
+    <template #description>
+      <p class="text-[15px] text-gray-500 dark:text-gray-400 mt-1 font-medium">
+        {{ companyName }}
+      </p>
+    </template>
+
+    <!-- :src="getCompanyLogo(companyName)" -->
+
+    <div class="work-card_content text-[14px] text-gray-500 dark:text-gray-400">
+      {{ startsOn }} - {{ endsOn }}
+    </div>
+
+    <div v-if="projectName" class="work-card_footer">
+      <NuxtLink :to="`/project/${projectName}`" class="work-card_link">
+        {{ projectName }}
+      </NuxtLink>
+    </div>
   </ULandingCard>
 </template>
 
@@ -30,6 +40,10 @@ defineProps({
   companyName: {
     type: String,
     required: true,
+  },
+  companyLogo: {
+    type: String,
+    default: null,
   },
   jobName: {
     type: String,
@@ -50,6 +64,10 @@ defineProps({
     default: null,
   },
 });
+
+function getCompanyLogo(companyName: string) {
+  return companyName.toLowerCase().split(" ").join("-");
+}
 </script>
 
 <style lang="scss">
@@ -57,10 +75,11 @@ defineProps({
   .work-card_footer {
     border-top: 1px solid #ccc;
     padding-top: 1rem;
-  }
-}
+    text-align: right;
 
-.landing-card-container {
-  background-color: red;
+    .work-card_link {
+      text-decoration: underline;
+    }
+  }
 }
 </style>

@@ -53,6 +53,11 @@ const links = [
     to: "#work",
     exactHash: true,
   },
+  {
+    label: "Contact",
+    to: "#contact",
+    exactHash: true,
+  },
 ];
 </script>
 
