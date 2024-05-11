@@ -32,7 +32,7 @@
       <UButton
         to="https://adrianocahete.dev/resume-artifacts/[en-US]-Adriano_Cahete.pdf"
         target="_blank"
-        icon="mdi:file-pdf-box"
+        icon="i-simple-icons-file-pdf"
         aria-label="PDF Resume"
         color="gray"
         variant="ghost"

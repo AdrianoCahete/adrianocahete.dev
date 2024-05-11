@@ -8,16 +8,16 @@ useHead({
 });
 
 const title = "Adriano Cahete";
-const description =
-  "Nuxt UI Pro is a collection of premium Vue components built on top of Nuxt UI to create beautiful & responsive Nuxt applications in minutes.";
+const description = "Adriano Cahete | Design Technologist & DesignOps";
+const socialImage = "https://adrianocahete.dev/assets/social-card.png";
 
 useSeoMeta({
   title,
   description,
   ogTitle: title,
   ogDescription: description,
-  ogImage: "https://ui-pro-starter.nuxt.dev/social-card.png",
-  twitterImage: "https://ui-pro-starter.nuxt.dev/social-card.png",
+  ogImage: socialImage,
+  twitterImage: socialImage,
   twitterCard: "summary_large_image",
 });
 </script>
@@ -31,3 +31,129 @@ useSeoMeta({
 
   <NavFooter />
 </template>
+
+<style lang="scss">
+/*!
+*
+*  CSS made for use in Adriano Cahete's Portfolio https://adrianocahete.dev/
+*
+*/
+
+// Default Dark Mode
+:root {
+  --primaryColor: rgba(26, 120, 146, 1);
+
+  --colorHighlight-100: rgba(234, 144, 116, 1);
+  --colorHighlight-200: rgba(231, 60, 126, 1);
+  --colorHighlight-300: rgba(35, 166, 213, 1);
+  --colorHighlight-400: rgba(17, 204, 160, 1);
+
+  --bgColor: linear-gradient(
+    -45deg,
+    rgba(238, 237, 240, 1),
+    rgba(243, 241, 245, 1)
+  );
+
+  --defaultBorderColor: rgba(26, 120, 146, 1);
+
+  --scrollBarHandle: rgba(3, 76, 150, 1);
+  --scrollbarColor: var(--contentBg);
+
+  // Selection
+  --selectionBG: var(--primaryColor);
+  --selectionColor: var(--navColor);
+
+  // Navbar
+  --navbarBgColor: linear-gradient(
+    -45deg,
+    rgba(23, 205, 205, 1),
+    rgba(1, 59, 143, 1),
+    rgba(1, 59, 143, 1),
+    rgba(23, 205, 205, 1)
+  );
+
+  --navbarBgColor-blurred: linear-gradient(
+    -45deg,
+    rgba(1, 115, 143, 0.85),
+    rgba(1, 59, 143, 0.85),
+    rgba(1, 59, 143, 0.85),
+    rgba(1, 115, 143, 0.85)
+  );
+  --navbarColor: transparent;
+
+  --navbarBorder: 1px solid var(--defaultBorderColor);
+
+  --navbarIconColor: rgba(255, 255, 255, 1);
+  --navbarIconColorAlt: rgba(25, 107, 137, 1);
+
+  --navColor: rgba(255, 255, 255, 0.7);
+  --navColorActive: rgba(255, 255, 255, 1);
+
+  --iconColorHover: rgba(1, 19, 49, 1);
+
+  // Content
+  --contentBg: rgba(245, 245, 245, 1);
+  --contentColor: rgba(1, 19, 49, 1);
+
+  --titleColor: linear-gradient(
+    -45deg,
+    rgba(234, 144, 116, 1),
+    rgba(231, 60, 126, 1),
+    rgba(35, 166, 213, 1),
+    rgba(35, 213, 171, 1)
+  );
+
+  --subtitleColor: var(--primaryColor);
+
+  // Buttons
+  --btnPrimaryBorderColor: linear-gradient(
+    -45deg,
+    rgba(23, 205, 205, 1) 0%,
+    rgba(1, 59, 143, 1) 100%
+  );
+}
+
+// Browser Customizations
+// Scrollbar for Chrome
+// https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px var(--scrollbarColor);
+  border-radius: 3px;
+}
+
+// Handle
+::-webkit-scrollbar-thumb {
+  background: var(--scrollBarHandle);
+  border-radius: 10px;
+
+  &:hover {
+    background: var(--scrollBarHandle);
+  }
+}
+
+::-webkit-scrollbar-track-piece {
+  // not handle on
+  background: var(--scrollbarColor);
+}
+
+.text-gradient {
+  color: transparent;
+  background: var(--titleColor);
+  background-size: 300% 100%;
+  background-position: 180% 100%;
+  background-clip: text;
+}
+
+.text-gradient-main {
+  color: transparent;
+  background: var(--titleColor);
+  background-size: 400% 400%;
+  background-clip: text;
+  animation: gradient-title 5s ease-in-out infinite;
+  transition: font-size 0.5s ease-in-out;
+}
+</style>
