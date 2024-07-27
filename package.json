@@ -1,6 +1,10 @@
 {
   "name": "adrianocahete.dev",
   "version": "3.0",
+  "description": "Front ENd, Design Technologist & DesignOps",
+  "author": "Adriano Cahete",
+  "mail": "me@adrianocahete.dev",
+  "url": "https://adrianocahete.dev",
   "private": true,
   "type": "module",
   "scripts": {
@@ -10,7 +14,8 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
-    "typecheck": "nuxt typecheck"
+    "typecheck": "nuxt typecheck",
+    "update": "ncu && ncu -u && npx nuxi upgrade"
   },
   "dependencies": {
     "@iconify-json/heroicons": "^1.1.20",

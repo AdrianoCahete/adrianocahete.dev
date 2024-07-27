@@ -3,14 +3,14 @@
     <template #logo> Adriano Cahete </template>
 
     <template #right>
-      <UColorModeButton />
+      <UColorModeButton color="black" />
 
       <UButton
         to="https://linkedin.com/in/AdrianoCahete"
         target="_blank"
         icon="i-simple-icons-linkedin"
         aria-label="LinkedIn"
-        color="gray"
+        color="black"
         variant="ghost"
       />
       <UButton
@@ -18,7 +18,7 @@
         target="_blank"
         icon="i-simple-icons-github"
         aria-label="GitHub"
-        color="gray"
+        color="black"
         variant="ghost"
       />
       <UButton
@@ -26,15 +26,15 @@
         target="_blank"
         icon="i-simple-icons-behance"
         aria-label="Behance"
-        color="gray"
+        color="black"
         variant="ghost"
       />
       <UButton
-        to="https://adrianocahete.dev/resume-artifacts/[en-US]-Adriano_Cahete.pdf"
+        to="https://adrianocahete.dev/assets/[en-US]-Adriano_Cahete.pdf"
         target="_blank"
-        icon="i-simple-icons-file-pdf"
+        icon="i-simple-icons-googledocs"
         aria-label="PDF Resume"
-        color="gray"
+        color="black"
         variant="ghost"
       />
     </template>
@@ -61,4 +61,14 @@ const links = [
 ];
 </script>
 
-<style></style>
+<style lang="scss">
+.header-background-gradient {
+  background: var(--navbarBgColor);
+  color: #fff;
+}
+
+.header-color-text {
+  color: #fff;
+  font-weight: normal;
+}
+</style>

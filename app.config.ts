@@ -20,6 +20,15 @@ export default defineAppConfig({
           "text-5xl font-bold tracking-tight dark:text-white sm:text-7xl text-gradient-main",
       },
     },
+
+    header: {
+      wrapper:
+        "header-background-gradient backdrop-blur border-b border-gray-200 dark:border-gray-800 -mb-px sticky top-0 z-50",
+      logo: "header-color-text flex-shrink-0 text-xl dark:text-white flex items-end gap-1.5",
+      button: {
+        base: "header-color-text lg:hidden",
+      },
+    },
   },
   googleFonts: {
     download: true,
@@ -27,17 +36,7 @@ export default defineAppConfig({
 
     families: {
       Roboto: true,
-      "Josefin+Sans": true,
-      Lato: [100, 300],
-      Raleway: {
-        wght: [100, 400],
-        ital: [100],
-      },
       Inter: "200..700",
-      "Crimson Pro": {
-        wght: "200..900",
-        ital: "200..700",
-      },
     },
   },
 });

@@ -66,14 +66,6 @@ useSeoMeta({
   // Navbar
   --navbarBgColor: linear-gradient(
     -45deg,
-    rgba(23, 205, 205, 1),
-    rgba(1, 59, 143, 1),
-    rgba(1, 59, 143, 1),
-    rgba(23, 205, 205, 1)
-  );
-
-  --navbarBgColor-blurred: linear-gradient(
-    -45deg,
     rgba(1, 115, 143, 0.85),
     rgba(1, 59, 143, 0.85),
     rgba(1, 59, 143, 0.85),
@@ -140,12 +132,76 @@ useSeoMeta({
   background: var(--scrollbarColor);
 }
 
+// Animations
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fromUp2Down {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fromDown2Up {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes gradient-1 {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes gradient-2 {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient-title {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+// Texts
 .text-gradient {
   color: transparent;
   background: var(--titleColor);
   background-size: 300% 100%;
   background-position: 180% 100%;
   background-clip: text;
+  line-height: 1.2;
 }
 
 .text-gradient-main {
