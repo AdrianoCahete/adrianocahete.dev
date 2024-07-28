@@ -1,5 +1,5 @@
 <template>
-  <div />
+  <div>Admin :)</div>
 </template>
 
 <script setup>

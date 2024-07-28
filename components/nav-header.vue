@@ -4,7 +4,6 @@
 
     <template #right>
       <UColorModeButton color="black" />
-
       <UButton
         to="https://linkedin.com/in/AdrianoCahete"
         target="_blank"
@@ -42,6 +41,16 @@
 </template>
 
 <script setup>
+// import { ref } from "vue";
+// import { vElementVisibility } from "@vueuse/components";
+
+// // const start = ref(null);
+// const isVisible = ref(false);
+
+// function onElementVisibility(state) {
+//   isVisible.value = state;
+// }
+
 const links = [
   {
     label: "About",
@@ -51,6 +60,11 @@ const links = [
   {
     label: "Work",
     to: "#work",
+    exactHash: true,
+  },
+  {
+    label: "Projects",
+    to: "#projects",
     exactHash: true,
   },
   {
