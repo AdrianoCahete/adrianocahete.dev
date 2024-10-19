@@ -21,8 +21,6 @@
       </p>
     </template>
 
-    <!-- :src="getCompanyLogo(companyName)" -->
-
     <div class="work-card_content text-[14px] text-gray-500 dark:text-gray-400">
       {{ startsOn }} - {{ endsOn }}
     </div>
@@ -72,6 +70,12 @@ function getCompanyLogo(companyName: string) {
 
 <style lang="scss">
 .work-card {
+  cursor: default;
+
+  .landing-card-body {
+    justify-content: space-between;
+  }
+
   .work-card_footer {
     border-top: 1px solid #ccc;
     padding-top: 1rem;
