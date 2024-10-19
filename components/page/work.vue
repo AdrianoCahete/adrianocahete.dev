@@ -1,44 +1,62 @@
 <template>
   <UPageGrid>
     <WorkCard
-      company-name="Philips"
-      job-name="Specialist FrontEnd Developer, Design Technologist & DesignOps"
-      starts-on="Nov 2022"
-      ends-on="Jan 2024"
-    />
-    <WorkCard
-      company-name="Mercedes Benz Bank (via Capgemini)"
-      job-name="Senior FrontEnd Developer & Product Designer"
-      starts-on="Jun 2022"
-      ends-on="Nov 2022"
-    />
-    <WorkCard
-      company-name="OWSE - Objects Web & Software Engineering"
-      job-name="Senior FrontEnd Developer"
-      starts-on="Apr 2021"
-      ends-on="Jan 2023"
-    />
-    <WorkCard
-      company-name="Bradesco (via Capgemini)"
-      job-name="Senior FrontEnd Developer & Product Designer"
-      starts-on="May 2021"
-      ends-on="Jun 2022"
-    />
-    <WorkCard
-      company-name="SAI Global"
-      job-name="Lead FrontEnd Developer & Product Designer"
-      starts-on="Jan 2017"
-      ends-on="Apr 2020"
-    />
-    <WorkCard
-      company-name="Modulo Security Solutions"
-      job-name="UI/UX Designer & FrontEnd Developer"
-      starts-on="Oct 2012"
-      ends-on="Dec 2016"
+      v-for="(work, index) in workplaces"
+      :key="index"
+      :company-name="work.companyName"
+      :job-name="work.jobName"
+      :starts-on="work.startsOn"
+      :ends-on="work.endsOn"
+      :project-name="work.projectName"
     />
   </UPageGrid>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const workplaces = [
+  {
+    jobName: "Specialist FrontEnd Developer, Design Technologist & DesignOps",
+    companyName: "Philips",
+    startsOn: "Jun 2022",
+    endsOn: "Nov 2024",
+    projectName: null,
+  },
+  {
+    jobName: "Senior FrontEnd Developer & Product Designer",
+    companyName: "Mercedes Benz Bank (via Capgemini)",
+    startsOn: "Jun 2022",
+    endsOn: "Nov 2022",
+    projectName: null,
+  },
+  {
+    jobName: "Senior FrontEnd Developer",
+    companyName: "OWSE - Objects Web & Software Engineering",
+    startsOn: "Apr 2021",
+    endsOn: "Jan 2023",
+    projectName: null,
+  },
+  {
+    jobName: "Senior FrontEnd Developer & Product Designer",
+    companyName: "Bradesco (via Capgemini)",
+    startsOn: "May 2021",
+    endsOn: "Jun 2022",
+    projectName: null,
+  },
+  {
+    jobName: "Lead FrontEnd Developer & Product Designer",
+    companyName: "SAI Global",
+    startsOn: "Jan 2017",
+    endsOn: "Apr 2020",
+    projectName: null,
+  },
+  {
+    jobName: "UI/UX Designer & FrontEnd Developer",
+    companyName: "Modulo Security Solutions",
+    startsOn: "Oct 2012",
+    endsOn: "Dec 2016",
+    projectName: null,
+  },
+];
+</script>
 
 <style></style>
