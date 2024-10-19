@@ -25,7 +25,7 @@ useSeoMeta({
 <template>
   <NavHeader />
 
-  <UMain>
+  <UMain class="snap-y">
     <NuxtPage />
   </UMain>
 

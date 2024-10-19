@@ -2,7 +2,7 @@
   <ULandingHero
     id="start"
     title="Adriano Cahete"
-    class="landing-hero-start"
+    class="landing-hero-start snap-start"
     ref="start"
   >
     <template #description>
@@ -13,19 +13,19 @@
     </template>
   </ULandingHero>
 
-  <ULandingSection id="about" title="About">
+  <ULandingSection id="about" title="About" class="snap-start">
     <PageAbout />
   </ULandingSection>
 
-  <ULandingSection id="work" title="Work Experience">
+  <ULandingSection id="work" title="Work Experience" class="snap-start">
     <PageWork />
   </ULandingSection>
 
-  <ULandingSection id="projects" title="Projects">
+  <ULandingSection id="projects" title="Projects" class="snap-start">
     <PageProjects />
   </ULandingSection>
 
-  <ULandingSection id="contact" title="Contact">
+  <ULandingSection id="contact" title="Contact" class="snap-start">
     <PageContact />
   </ULandingSection>
 </template>
