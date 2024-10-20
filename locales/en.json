@@ -1,0 +1,10 @@
+{
+  "menu": {
+    "home": "Home",
+    "about": "About Us",
+    "contact": "Contact"
+  },
+  "footer": {
+    "copyright": "© 2024 Your Company"
+  }
+}
