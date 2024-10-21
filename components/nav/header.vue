@@ -3,7 +3,7 @@
     <template #logo> Adriano Cahete </template>
 
     <template #right>
-      <UColorModeButton color="black" />
+      <UColorModeToggle color="white" />
       <UButton
         to="https://linkedin.com/in/AdrianoCahete"
         target="_blank"
