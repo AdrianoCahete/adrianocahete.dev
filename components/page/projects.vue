@@ -15,11 +15,30 @@
   </section>
   <section>
     <h2 class="text-subsection">Interfaces</h2>
+    <UAlert
+      color="sky"
+      variant="subtle"
+      description="Most UIs created by me over the last years are under a Non-Disclosure
+      Agreement, so not everything can be publicly available"
+      class="mb-6 mt-4"
+    />
     <UPageGrid>
-      <UPageCard
-        title="Tailwind CSS"
-        description="Add Tailwind CSS to your Nuxt application in seconds with PurgeCSS included for minimal CSS."
-        icon="i-simple-icons-tailwindcss"
+      <!--<a
+        href="https://behance.net/AdrianoCahete/"
+        title="Behance"
+        target="_blank"
+        rel="nofollow,noopener,external"
+      >
+        Behance
+      </a> -->
+      <ULandingCard
+        v-for="(ui, index) in interfaces"
+        :key="index"
+        :title="ui.title"
+        :description="ui.description"
+        :icon="ui.icon"
+        :to="ui.url"
+        target="_blank"
       />
     </UPageGrid>
   </section>
@@ -35,8 +54,7 @@
     },
     {
       title: "Google Chrome Lighthouse",
-      description:
-        "Automated auditing, performance metrics, and best practices for the web",
+      description: "Fixed CLI compatibility problems on windows environment",
       icon: "",
       url: "https://github.com/GoogleChrome/lighthouse/blob/468c10bb9df7ded215b7a3c47e23f48c1af656f7/changelog.md#new-contributors-24",
     },
@@ -45,7 +63,69 @@
       description:
         "Work as a Product Designer and update stylesheet architecture to meet best practices",
       icon: "",
+      url: "https://github.com/RocketChat/Rocket.Chat/",
+    },
+    {
+      title: "Detect.JS",
+      description: "Keeping the library updated with the latest browsers",
+      icon: "",
+      url: "https://github.com/darcyclarke/Detect.js",
+    },
+    {
+      title: "Webfont Generator CLI",
+      description:
+        "Fixed problems on the original tool, to make sure that will run flawlessly",
+      icon: "",
+      url: "https://github.com/darcyclarke/Detect.js",
+    },
+    {
+      title: "Better Adrena",
+      description:
+        "Added styles and js files to create some useful features in Adrenaline Forum",
+      icon: "",
+      url: "https://github.com/AdrianoCahete/AdrenalineLight",
+    },
+  ];
+
+  const interfaces = [
+    {
+      title: "phpMyAdmin Website",
+      description: "Redesign and brand update to phpMyAdmin project",
+      icon: "",
+      url: "https://github.com/phpmyadmin/website/pull/137",
+    },
+    {
+      title: "Google Chrome Lighthouse",
+      description: "Fixed CLI compatibility problems on windows environment",
+      icon: "",
       url: "https://github.com/GoogleChrome/lighthouse/blob/468c10bb9df7ded215b7a3c47e23f48c1af656f7/changelog.md#new-contributors-24",
+    },
+    {
+      title: "RocketChat",
+      description:
+        "Work as a Product Designer and update stylesheet architecture to meet best practices",
+      icon: "",
+      url: "https://github.com/RocketChat/Rocket.Chat/",
+    },
+    {
+      title: "Detect.JS",
+      description: "Keeping the library updated with the latest browsers",
+      icon: "",
+      url: "https://github.com/darcyclarke/Detect.js",
+    },
+    {
+      title: "Webfont Generator CLI",
+      description:
+        "Fixed problems on the original tool, to make sure that will run flawlessly",
+      icon: "",
+      url: "https://github.com/darcyclarke/Detect.js",
+    },
+    {
+      title: "Better Adrena",
+      description:
+        "Added styles and js files to create some useful features in Adrenaline Forum",
+      icon: "",
+      url: "https://github.com/AdrianoCahete/AdrenalineLight",
     },
   ];
 </script>

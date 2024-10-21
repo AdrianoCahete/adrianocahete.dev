@@ -14,6 +14,7 @@ export default defineAppConfig({
       section: {
         title:
           "text-3xl font-bold tracking-tight dark:text-gradient sm:text-4xl lg:text-5xl text-gradient",
+        container: "gap-12 sm:gap-y-12 flex flex-col",
       },
       hero: {
         container: "gap-16 sm:gap-y-24 flex flex-col max-w-full",
