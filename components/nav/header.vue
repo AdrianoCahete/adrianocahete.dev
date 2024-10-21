@@ -41,48 +41,71 @@
 </template>
 
 <script setup>
-// import { ref } from "vue";
-// import { vElementVisibility } from "@vueuse/components";
+  // import { ref } from "vue";
+  // import { vElementVisibility } from "@vueuse/components";
 
-// // const start = ref(null);
-// const isVisible = ref(false);
+  // // const start = ref(null);
+  // const isVisible = ref(false);
 
-// function onElementVisibility(state) {
-//   isVisible.value = state;
-// }
+  // function onElementVisibility(state) {
+  //   isVisible.value = state;
+  // }
 
-const links = [
-  {
-    label: "About",
-    to: "#about",
-    exactHash: true,
-  },
-  {
-    label: "Work",
-    to: "#work",
-    exactHash: true,
-  },
-  {
-    label: "Projects",
-    to: "#projects",
-    exactHash: true,
-  },
-  {
-    label: "Contact",
-    to: "#contact",
-    exactHash: true,
-  },
-];
+  const links = [
+    {
+      label: "About",
+      to: "#about",
+      exactHash: true,
+    },
+    {
+      label: "Work",
+      to: "#work",
+      exactHash: true,
+    },
+    {
+      label: "Projects",
+      to: "#projects",
+      exactHash: true,
+    },
+    {
+      label: "Contact",
+      to: "#contact",
+      exactHash: true,
+    },
+  ];
+
+  const headerButtons = [
+    {
+      label: "About",
+      to: "#about",
+      exactHash: true,
+    },
+    {
+      label: "Work",
+      to: "#work",
+      exactHash: true,
+    },
+    {
+      label: "Projects",
+      to: "#projects",
+      exactHash: true,
+    },
+    {
+      label: "Contact",
+      to: "#contact",
+      exactHash: true,
+    },
+  ];
 </script>
 
 <style lang="scss">
-.header-background-gradient {
-  background: var(--navbarBgColor);
-  color: #fff;
-}
+  .header-background-gradient {
+    background: var(--navbarBgColor);
+    color: #fff;
+  }
 
-.header-color-text {
-  color: #fff;
-  font-weight: normal;
-}
+  .header-color-text {
+    color: #fff;
+    font-weight: normal;
+  }
 </style>
