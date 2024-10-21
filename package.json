@@ -1,6 +1,6 @@
 {
   "name": "adrianocahete.dev",
-  "version": "3.2",
+  "version": "3.3",
   "description": "FrontEnd Developer, Design Technologist & DesignOps",
   "author": {
     "name": "Adriano Cahete",
@@ -21,18 +21,24 @@
   "dependencies": {
     "@iconify-json/heroicons": "^1.2.1",
     "@iconify-json/mdi": "^1.2.1",
-    "@iconify-json/simple-icons": "^1.2.8",
+    "@iconify-json/simple-icons": "^1.2.9",
     "@nuxt/ui-pro": "^1.4.4",
     "@vueuse/components": "^11.1.0",
     "@vueuse/core": "^11.1.0",
-    "@vueuse/nuxt": "^11.1.0"
+    "@vueuse/motion": "^2.2.6",
+    "@vueuse/nuxt": "^11.1.0",
+    "nuxt-i18n-micro": "^1.29.0"
   },
   "devDependencies": {
+    "@inspira-ui/plugins": "^0.0.1",
     "@nuxt/eslint-config": "^0.6.0",
-    "@nuxtjs/google-fonts": "^3.2.0",
-    "eslint": "^9.12.0",
+    "@nuxt/fonts": "^0.10.0",
+    "clsx": "^2.1.1",
+    "eslint": "^9.13.0",
     "nuxt": "^3.13.2",
-    "sass": "^1.80.2",
+    "sass": "^1.80.3",
+    "tailwind-merge": "^2.5.4",
+    "tailwindcss-animate": "^1.0.7",
     "vue-tsc": "^2.1.6"
   },
   "packageManager": "pnpm@9.6.0+sha1.65cd48c20dd329b7f455088b6dd17d4d5b6d02e3"

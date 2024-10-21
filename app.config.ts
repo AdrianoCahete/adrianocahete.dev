@@ -13,11 +13,14 @@ export default defineAppConfig({
       },
       section: {
         title:
-          "text-3xl font-bold tracking-tight dark:text-white sm:text-4xl lg:text-5xl text-gradient",
+          "text-3xl font-bold tracking-tight dark:text-gradient sm:text-4xl lg:text-5xl text-gradient",
       },
       hero: {
+        container: "gap-16 sm:gap-y-24 flex flex-col max-w-full",
         title:
-          "text-5xl font-bold tracking-tight dark:text-white sm:text-7xl text-gradient-main",
+          "text-8xl font-bold tracking-tight sm:text-7xl text-gradient-main",
+        description:
+          "mt-2 text-lg tracking-tight text-gray-600 dark:text-gray-300",
       },
     },
 
@@ -28,15 +31,6 @@ export default defineAppConfig({
       button: {
         base: "header-color-text lg:hidden",
       },
-    },
-  },
-  googleFonts: {
-    download: true,
-    preload: true,
-
-    families: {
-      Roboto: true,
-      Inter: "200..700",
     },
   },
 });

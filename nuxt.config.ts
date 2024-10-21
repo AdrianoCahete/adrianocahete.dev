@@ -3,7 +3,8 @@ import pkg from "./package.json";
 
 export default defineNuxtConfig({
   extends: ["@nuxt/ui-pro"],
-  modules: ["@vueuse/nuxt", "@nuxt/ui", "@nuxtjs/google-fonts"],
+  modules: ["@vueuse/nuxt", "@nuxt/ui", // "nuxt-i18n-micro",
+  "@vueuse/motion/nuxt", "@nuxt/fonts"],
 
   runtimeConfig: {
     // Private keys are only available on the server
@@ -14,6 +15,18 @@ export default defineNuxtConfig({
       pkgVersion: pkg.version,
     },
   },
+
+  // i18n: {
+  //   locales: [
+  //     { code: "en", iso: "en-US", dir: "ltr" },
+  //     // { code: 'br', iso: 'pt-BR', dir: 'ltr' },
+  //   ],
+  //   fallbackLocale: "en",
+  //   disablePageLocales: true,
+  //   defaultLocale: "en",
+  //   translationDir: "locales",
+  //   meta: false,
+  // },
 
   ui: {
     icons: ["heroicons", "simple-icons"],
