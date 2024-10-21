@@ -1,5 +1,7 @@
 <template>
   <ULandingCard
+    :key="stringNormalize(companyName)"
+    :id="stringNormalize(companyName)"
     :title="jobName"
     :description="companyName"
     color="primary"
@@ -59,12 +61,17 @@ defineProps({
   },
   projectName: {
     type: String,
-    default: null,
+    default: "",
   },
 });
 
-function getCompanyLogo(companyName: string) {
-  return companyName.toLowerCase().split(" ").join("-");
+// function getCompanyLogo(companyName: string) {
+//   return companyName.toLowerCase().split(" ").join("-");
+// }
+
+function stringNormalize(companyName: string) {
+  const companyKey = `${companyName.toLowerCase().split(" ").join("-")}`;
+  return companyKey;
 }
 </script>
 
