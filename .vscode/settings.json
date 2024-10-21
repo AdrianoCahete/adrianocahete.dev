@@ -14,6 +14,6 @@
     "tw\\(\\s*('(.*?)'|\"(.*?)\")\\s*\\)"
   ],
   "spellright.language": ["en"],
-  "spellright.documentTypes": ["markdown", "latex", "plaintext"],
+  "spellright.documentTypes": ["markdown", "latex", "plaintext", "vue"],
   "typescript.tsdk": "node_modules\\typescript\\lib"
 }
