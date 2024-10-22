@@ -23,14 +23,6 @@
       class="mb-6 mt-4"
     />
     <UPageGrid>
-      <!--<a
-        href="https://behance.net/AdrianoCahete/"
-        title="Behance"
-        target="_blank"
-        rel="nofollow,noopener,external"
-      >
-        Behance
-      </a> -->
       <ULandingCard
         v-for="(ui, index) in interfaces"
         :key="index"
