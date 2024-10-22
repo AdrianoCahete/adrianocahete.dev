@@ -36,10 +36,6 @@ export default defineNuxtConfig({
   //   meta: false,
   // },
 
-  ui: {
-    icons: ["heroicons", "simple-icons"],
-  },
-
   vite: {
     css: {
       preprocessorOptions: {

@@ -3,6 +3,7 @@ export default defineAppConfig({
     primary: "sky",
     gray: "slate",
 
+    icons: ["heroicons", "simple-icons"],
     landing: {
       card: {
         wrapper: "landing-card-wrapper",
@@ -12,9 +13,10 @@ export default defineAppConfig({
         },
       },
       section: {
+        wrapper: "py-auto pt-12 pb-4 sm:py-32",
+        container: "gap-12 sm:gap-y-12 flex flex-col",
         title:
           "text-3xl font-bold tracking-tight dark:text-gradient sm:text-4xl lg:text-5xl text-gradient",
-        container: "gap-12 sm:gap-y-12 flex flex-col",
       },
       hero: {
         container: "gap-16 sm:gap-y-24 flex flex-col max-w-full",

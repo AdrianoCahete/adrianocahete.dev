@@ -6,6 +6,7 @@
       }}
       <span v-if="$config.public.version">- v{{ $config.public.version }}</span>
     </template>
+    <template #right> Made with Nuxt 3 + Tailwind </template>
   </UFooter>
 </template>
 

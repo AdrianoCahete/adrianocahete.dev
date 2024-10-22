@@ -26,13 +26,15 @@
 </script>
 
 <template>
-  <NavHeader />
+  <NuxtLoadingIndicator />
+  <NuxtLayout>
+    <NavHeader />
 
-  <UMain class="snap-y">
-    <NuxtPage />
-  </UMain>
-
-  <NavFooter />
+    <UMain>
+      <NuxtPage />
+    </UMain>
+    <NavFooter />
+  </NuxtLayout>
 </template>
 
 <style lang="scss">
@@ -137,6 +139,12 @@
     background: var(--scrollbarColor);
   }
 
+  body {
+    scroll-snap-type: y proximity;
+    scroll-snap-align: start;
+    // scroll-margin: 40px;
+  }
+
   // Animations
   @keyframes fadeIn {
     0% {
@@ -217,13 +225,14 @@
     }
   }
 
-  // .text-gradient-main {
-  //   color: transparent;
-  //   background: var(--titleColor);
-  //   background-size: 400% 400%;
-  //   background-clip: text;
-  //   animation: gradient-title 5s ease-in-out infinite;
-  //   transition: font-size 0.5s ease-in-out;
-  //   font-weight: 600;
-  // }
+  .text-gradient-main {
+    color: transparent;
+    background: var(--titleColor);
+    background-size: 400% 400%;
+    background-clip: text;
+    animation: gradient-title 5s ease-in-out infinite;
+    transition: font-size 0.5s ease-in-out;
+    font-weight: 600;
+
+  }
 </style>

@@ -61,7 +61,7 @@
   }
 
   .landing-description {
-    opacity: 0.6;
+    opacity: 0.8;
     transition: opacity 0.5s ease-in-out;
   }
 </style>

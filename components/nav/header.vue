@@ -3,7 +3,10 @@
     :links="links"
     to="#start"
   >
-    <template #logo> Adriano Cahete </template>
+    <template #logo>
+      <DevOnly>[Dev]</DevOnly>
+      Adriano Cahete
+    </template>
 
     <template #right>
       <UColorModeToggle />

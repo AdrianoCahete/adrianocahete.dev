@@ -48,6 +48,25 @@
         />
       </linearGradient>
 
+      <linearGradient id="starterGradient">
+        <stop
+          offset="0%"
+          stop-color="rgba(234, 144, 116, 1)"
+        />
+        <stop
+          offset="25%"
+          stop-color="rgba(231, 60, 126, 1)"
+        />
+        <stop
+          offset="75%"
+          stop-color="rgba(35, 166, 213, 1)"
+        />
+        <stop
+          offset="100%"
+          stop-color="rgba(35, 213, 171, 1)"
+        />
+      </linearGradient>
+
       <!-- Radial Gradient -->
       <radialGradient
         id="revealMask"
@@ -69,6 +88,7 @@
         />
       </radialGradient>
 
+      <!-- Mouse Cursor mask -->
       <mask id="textMask">
         <rect
           x="0"
@@ -80,13 +100,19 @@
       </mask>
     </defs>
 
+    <!-- Base text -->
+    <!-- :fill="`${hovered ? '' : 'url(#starterGradient)'}`" -->
+    <!-- :class="`${fontFamily} ${fontFamily} ${fontStrokeColor} ${fontStrokeColorDark} ${hovered ? fontFill : 'text-gradient-main'} ${fontSize}`" -->
     <text
       x="50%"
       y="50%"
       text-anchor="middle"
       dominant-baseline="middle"
       :stroke-width="strokeWidth"
-      :style="{ opacity: hovered ? opacity : 0.5 }"
+      :style="[
+        { opacity: hovered ? opacity : 0.5 },
+        { transition: 'opacity 0.3s ease' },
+      ]"
       :class="`${fontFamily} ${fontFamily} ${fontStrokeColor} ${fontStrokeColorDark} ${fontFill} ${fontSize}`"
     >
       {{ text }}
@@ -110,6 +136,7 @@
       y="50%"
       text-anchor="middle"
       dominant-baseline="middle"
+      fill="url(#textGradient)"
       stroke="url(#textGradient)"
       :stroke-width="strokeWidth"
       mask="url(#textMask)"
@@ -131,8 +158,9 @@
   const fontSize = "text-7x1";
   const fontStrokeColor = "stroke-neutral-400";
   const fontStrokeColorDark = "dark:stroke-neutral-500";
+  const elemTransition = "transition-all duration-200 ease-in-out";
 
-  const classFontOptions = `${fontFamily} ${fontWeight} ${fontFill} ${fontSize}`;
+  const classFontOptions = `${fontFamily} ${fontWeight} ${fontFill} ${fontSize} ${elemTransition}`;
   const classColorOptions = `${fontStrokeColor} ${fontStrokeColorDark}`;
 
   const props = defineProps({
@@ -207,5 +235,9 @@
 <style scoped>
   .select-none {
     user-select: none;
+  }
+
+  .text-gradient-main {
+    transition: all 0.3s ease-in-out;
   }
 </style>
