@@ -1,9 +1,12 @@
 <template>
-  <UHeader :links="links">
+  <UHeader
+    :links="links"
+    to="#start"
+  >
     <template #logo> Adriano Cahete </template>
 
     <template #right>
-      <UColorModeToggle color="white" />
+      <UColorModeToggle />
       <UButton
         to="https://linkedin.com/in/AdrianoCahete"
         target="_blank"
@@ -56,21 +59,29 @@
       label: "About",
       to: "#about",
       exactHash: true,
+      exactActiveClass: "nav-active",
+      activeClass: "nav-active",
     },
     {
       label: "Work",
       to: "#work",
       exactHash: true,
+      exactActiveClass: "nav-active",
+      activeClass: "nav-active",
     },
     {
       label: "Projects",
       to: "#projects",
       exactHash: true,
+      exactActiveClass: "nav-active",
+      activeClass: "nav-active",
     },
     {
       label: "Contact",
       to: "#contact",
       exactHash: true,
+      exactActiveClass: "nav-active",
+      activeClass: "nav-active",
     },
   ];
 

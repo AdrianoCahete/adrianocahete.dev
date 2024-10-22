@@ -3,8 +3,16 @@ import pkg from "./package.json";
 
 export default defineNuxtConfig({
   extends: ["@nuxt/ui-pro"],
-  modules: ["@vueuse/nuxt", "@nuxt/ui", // "nuxt-i18n-micro",
-  "@vueuse/motion/nuxt", "@nuxt/fonts"],
+  modules: [
+    "@vueuse/nuxt",
+    "@nuxt/ui", // "nuxt-i18n-micro",
+    "@vueuse/motion/nuxt",
+    "@nuxt/fonts",
+  ],
+
+  colorMode: {
+    preference: "light",
+  },
 
   runtimeConfig: {
     // Private keys are only available on the server

@@ -53,7 +53,7 @@
     --colorHighlight-300: rgba(35, 166, 213, 1);
     --colorHighlight-400: rgba(17, 204, 160, 1);
 
-    --bgColor: linear-gradient(
+    --pageBackground: linear-gradient(
       -45deg,
       rgba(238, 237, 240, 1),
       rgba(243, 241, 245, 1)

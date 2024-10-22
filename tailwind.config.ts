@@ -16,8 +16,8 @@ export default <Partial<Config>>{
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
-        // ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--pageBackground))",
         foreground: "hsl(var(--foreground))",
 
         primary: {
