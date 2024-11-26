@@ -12,4 +12,8 @@
 
 <script lang="ts" setup></script>
 
-<style></style>
+<style scoped>
+  footer {
+    font-size: 1.2rem;
+  }
+</style>
