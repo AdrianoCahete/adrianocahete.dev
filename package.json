@@ -1,6 +1,6 @@
 {
   "name": "adrianocahete.dev",
-  "version": "3.3",
+  "version": "3.4",
   "description": "FrontEnd Developer, Design Technologist & DesignOps",
   "author": {
     "name": "Adriano Cahete",
@@ -33,6 +33,7 @@
     "@inspira-ui/plugins": "^0.0.1",
     "@nuxt/eslint-config": "^0.6.0",
     "@nuxt/fonts": "^0.10.0",
+    "@nuxtjs/device": "^3.2.4",
     "clsx": "^2.1.1",
     "eslint": "^9.13.0",
     "nuxt": "^3.13.2",

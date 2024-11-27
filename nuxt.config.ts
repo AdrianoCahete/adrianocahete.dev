@@ -7,7 +7,13 @@ export default defineNuxtConfig({
     compatibilityVersion: 4,
   },
   extends: ["@nuxt/ui-pro"],
-  modules: ["@vueuse/nuxt", "@nuxt/ui", "@vueuse/motion/nuxt", "@nuxt/fonts"],
+  modules: [
+    "@vueuse/nuxt",
+    "@nuxt/ui",
+    "@vueuse/motion/nuxt",
+    "@nuxt/fonts",
+    "@nuxtjs/device",
+  ],
 
   colorMode: {
     preference: "light",
