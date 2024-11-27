@@ -5,10 +5,7 @@
     ref="start"
   >
     <template #title>
-      <InspiraTextEffect
-        class="w-full min-lg:min-h-64"
-        text="Adriano Cahete"
-      />
+      <InspiraTextEffect text="Adriano Cahete" />
     </template>
     <template #description>
       <span class="landing-description">

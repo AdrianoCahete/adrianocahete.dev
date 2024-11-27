@@ -1,5 +1,6 @@
 <template>
   <svg
+    v-if="$device.isDesktop"
     ref="svgRef"
     width="100%"
     height="100%"
@@ -11,7 +12,7 @@
     @touchstart="handleTouchStart"
     @touchmove="handleTouchMove"
     @touchend="handleTouchEnd"
-    class="select-none overflow-visible"
+    class="select-none overflow-visible w-full min-lg:min-h-64"
   >
     <defs>
       <linearGradient
@@ -145,11 +146,11 @@
       {{ text }}
     </text>
   </svg>
+  <span v-else>{{ text }}</span>
 </template>
 
 <script setup lang="ts">
-  import { ref, reactive, computed } from "vue";
-  import { cn } from "~/lib/utils";
+  import { computed, reactive, ref } from "vue";
 
   // CSS Config
   const fontFamily = "font-[helvetica]";

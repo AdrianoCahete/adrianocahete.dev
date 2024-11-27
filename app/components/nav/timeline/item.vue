@@ -104,7 +104,7 @@
   .nav-timeline_item {
     display: flex;
     align-items: center;
-    padding-left: 50px;
+    padding-left: 50px; // TODO: Fix this on mobile
     padding-bottom: 1rem;
     border-left: 1px solid var(--primaryColor); // TODO: Get from vars
     border-image: none;

@@ -18,7 +18,8 @@
   .nav-timeline {
     display: flex;
     flex-direction: column;
-    width: max-content;
+    max-width: max-content; // TODO: Fix this on mobile
+    width: 80vw; // TODO: Fix this on mobile
     padding-top: 50px;
     padding-bottom: 50px;
 
