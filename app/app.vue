@@ -29,7 +29,6 @@
   <NuxtLoadingIndicator />
   <NuxtLayout>
     <NavHeader />
-
     <UMain>
       <NuxtPage />
     </UMain>
@@ -55,11 +54,15 @@
     --colorHighlight-300: rgba(35, 166, 213, 1);
     --colorHighlight-400: rgba(17, 204, 160, 1);
 
-    --pageBackground: linear-gradient(
-      -45deg,
-      rgba(238, 237, 240, 1),
-      rgba(243, 241, 245, 1)
-    );
+    --pageBackground-base: rgba(255, 255, 255, 1);
+
+    // --pageBackground: linear-gradient(
+    //   -45deg,
+    //   var(--pageBackground-base),
+    //   rgba(243, 241, 245, 1)
+    // );
+
+    --pageBackground-dark: rgba(28, 27, 34, 1);
 
     --defaultBorderColor: rgba(26, 120, 146, 1);
 
@@ -233,6 +236,5 @@
     animation: gradient-title 5s ease-in-out infinite;
     transition: font-size 0.5s ease-in-out;
     font-weight: 600;
-
   }
 </style>
