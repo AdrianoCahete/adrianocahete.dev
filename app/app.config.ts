@@ -3,7 +3,6 @@ export default defineAppConfig({
     primary: "sky",
     gray: "slate",
 
-    icons: ["heroicons", "simple-icons"],
     landing: {
       card: {
         wrapper: "landing-card-wrapper",
