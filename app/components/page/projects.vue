@@ -66,16 +66,16 @@
     {
       title: "Webfont Generator CLI",
       description:
-        "Fixed problems on the original tool, to make sure that will run flawlessly",
+        "Fixed problems on the original tool, to make sure that will run flawlessly on company pipelines",
       icon: "",
-      url: "https://github.com/darcyclarke/Detect.js",
+      url: "https://github.com/AdrianoCahete/webfont-generator-cli",
     },
     {
       title: "Better Adrena",
       description:
         "Added styles and js files to create some useful features in Adrenaline Forum",
       icon: "",
-      url: "https://github.com/AdrianoCahete/AdrenalineLight",
+      url: "https://github.com/AdrianoCahete/BetterAdrena",
     },
   ];
 
