@@ -1,0 +1,27 @@
+{
+  "name": "adrianocahete.dev",
+  "version": "3.4",
+  "description": "FrontEnd Developer, Design Technologist & DesignOps",
+  "author": {
+    "name": "Adriano Cahete",
+    "url": "https://adrianocahete.dev/"
+  },
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "typecheck": "nuxt typecheck",
+    "update": "ncu && ncu -u && npx nuxi upgrade"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@nuxt/ui": "^2.20.0",
+    "nuxt": "^3.15.0",
+    "vue": "latest"
+  }
+}
