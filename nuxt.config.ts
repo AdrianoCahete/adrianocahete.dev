@@ -15,6 +15,12 @@ export default defineNuxtConfig({
     "@nuxtjs/device",
   ],
 
+  router: {
+    options: {
+      scrollBehaviorType: "smooth",
+    },
+  },
+
   colorMode: {
     preference: "light",
   },
