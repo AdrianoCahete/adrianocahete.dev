@@ -1,5 +1,5 @@
 <template>
-  <div>Admin :)</div>
+  <div>Hackerman!</div>
 </template>
 
 <script setup>

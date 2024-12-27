@@ -55,6 +55,10 @@ export default defineNuxtConfig({
 
   devtools: {
     enabled: true,
+
+    timeline: {
+      enabled: true,
+    },
   },
 
   compatibilityDate: "2024-07-27",

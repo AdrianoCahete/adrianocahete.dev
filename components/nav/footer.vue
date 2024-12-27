@@ -7,7 +7,7 @@
       <span v-if="$config.public.version">- v{{ $config.public.version }}</span>
     </template>
     <template #right>
-      Made with <span class="spotlight text-gradient">Nuxt</span> + <span class="spotlight text-gradient">NuxtUI Pro</span> + <span class="spotlight text-gradient">Tailwind</span>
+      Made with <span class="spotlight text-gradient">Nuxt 3</span> + <span class="spotlight text-gradient">NuxtUI Pro</span> + <span class="spotlight text-gradient">Tailwind</span>
     </template>
   </UFooter>
 </template>
