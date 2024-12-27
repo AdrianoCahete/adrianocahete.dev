@@ -1,3 +1,24 @@
 {
-  "recommendations": ["nuxtr.nuxt-vscode-extentions"]
+  "recommendations": [
+    "editorconfig.editorconfig",
+    "dbaeumer.vscode-eslint",
+    "nuxt.mdc",
+    "cpreston321.nuxt-vscode",
+    "nuxtr.nuxt-vscode-extentions",
+    "willjleong.nuxt-typescript-snippets",
+    "nuxtr.nuxtr-vscode",
+    "esbenp.prettier-vscode",
+    "ban.spellright",
+    "bradlc.vscode-tailwindcss",
+    "gruntfuggly.todo-tree",
+    "vitest.explorer",
+    "redhat.vscode-yaml",
+    "antfu.goto-alias",
+    "antfu.iconify",
+    "medzhidov.hex-rgba-converter",
+    "mrmlnc.vscode-json5",
+    "fnando.linter",
+    "christian-kohler.path-intellisense",
+    "ms-playwright.playwright"
+  ]
 }

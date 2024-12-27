@@ -9,8 +9,29 @@ export default defineNuxtConfig({
   },
 
   extends: ["@nuxt/ui-pro"],
-  devtools: { enabled: true },
-  modules: ["@nuxt/ui"],
+  modules: [
+    "@nuxt/ui",
+    "@nuxt/eslint",
+    "@vueuse/nuxt",
+    "@vueuse/motion/nuxt",
+    "@nuxt/fonts",
+    "@nuxtjs/device",
+    "@nuxt/content",
+  ],
+
+  router: {
+    options: {
+      scrollBehaviorType: "smooth",
+    },
+  },
+
+  colorMode: {
+    preference: "light",
+  },
+
+  // content: {
+  //   // ... options
+  // },
 
   // vite: {
   //   css: {
@@ -21,6 +42,7 @@ export default defineNuxtConfig({
   //     },
   //   },
   // },
+
   runtimeConfig: {
     // Private keys are only available on the server
     // apiSecret: '',
@@ -31,5 +53,6 @@ export default defineNuxtConfig({
     },
   },
 
+  devtools: { enabled: true },
   compatibilityDate: "2024-12-25",
 });
