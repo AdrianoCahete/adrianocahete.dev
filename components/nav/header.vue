@@ -17,6 +17,7 @@
         aria-label="LinkedIn"
         color="black"
         variant="ghost"
+        class="hidden md:flex"
       />
       <UButton
         to="https://github.com/AdrianoCahete"
@@ -25,6 +26,7 @@
         aria-label="GitHub"
         color="black"
         variant="ghost"
+        class="hidden md:flex"
       />
       <UButton
         to="https://www.behance.net/AdrianoCahete/"
@@ -33,6 +35,7 @@
         aria-label="Behance"
         color="black"
         variant="ghost"
+        class="hidden md:flex"
       />
       <UButton
         to="https://adrianocahete.dev/assets/[en-US]-Adriano_Cahete.pdf"
@@ -41,7 +44,11 @@
         aria-label="PDF Resume"
         color="black"
         variant="ghost"
+        class="hidden md:flex"
       />
+    </template>
+    <template #panel>
+      <UAsideLinks :links="links" />
     </template>
   </UHeader>
 </template>

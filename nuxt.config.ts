@@ -5,10 +5,17 @@ export default defineNuxtConfig({
   extends: ["@nuxt/ui-pro"],
   modules: [
     "@vueuse/nuxt",
-    "@nuxt/ui", // "nuxt-i18n-micro",
+    "@nuxt/ui",
     "@vueuse/motion/nuxt",
     "@nuxt/fonts",
+    "@nuxtjs/device",
   ],
+
+  router: {
+    options: {
+      scrollBehaviorType: "smooth",
+    },
+  },
 
   colorMode: {
     preference: "light",
