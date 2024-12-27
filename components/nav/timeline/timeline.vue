@@ -1,5 +1,5 @@
 <template>
-  <div :class="['nav-timeline', isCenter ? ' is-center' : '']">
+  <div :class="['nav-timeline', isCenter ? ' nav-tl-center' : '', $device.isMobile ? 'nav-tl-mobile' : '']">
     <slot name="timelineitem"></slot>
   </div>
 </template>
@@ -20,12 +20,16 @@
     flex-direction: column;
     max-width: max-content; // TODO: Fix this on mobile
     width: 80vw; // TODO: Fix this on mobile
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 
-    &.is-center {
+    &.nav-tl-center {
       margin-left: auto;
       margin-right: auto;
+    }
+
+    &.nav-tl-mobile {
+      padding-top: 0;
     }
   }
 </style>

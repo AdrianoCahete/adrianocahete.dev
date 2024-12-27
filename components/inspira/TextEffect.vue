@@ -146,7 +146,7 @@
       {{ text }}
     </text>
   </svg>
-  <span v-else>{{ text }}</span>
+  <span v-else class="select-none overflow-visible w-full min-lg:min-h-64">{{ text }}</span>
 </template>
 
 <script setup lang="ts">

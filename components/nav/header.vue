@@ -47,8 +47,11 @@
         class="hidden md:flex"
       />
     </template>
+
     <template #panel>
-      <UAsideLinks :links="links" />
+      <UAsideLinks
+        :links="links"
+        :class="$device.isMobile ? 'bg-white pb-2 px-5 -mx-4 -mt-4 pt-4 border-b border-t-0 drop-shadow-lg' : ''" />
     </template>
   </UHeader>
 </template>

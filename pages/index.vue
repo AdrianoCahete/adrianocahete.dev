@@ -5,9 +5,10 @@
     ref="start"
   >
     <template #title>
-      <InspiraTextEffect text="Adriano Cahete" />
+      <InspiraTextEffect v-if="$device.isDesktop" text="Adriano Cahete" />
+      <div v-else class="text-5xl">Adriano Cahete</div>
     </template>
-    
+
     <template #description>
       <span class="landing-description">
         I am a
@@ -22,6 +23,7 @@
     id="about"
     title="About"
     class="snap-start"
+    :style="$device.isDesktop ? '' : 'padding-top: calc(var(--header-height) + 1.5rem);'"
   >
     <PageAbout />
   </ULandingSection>
@@ -30,6 +32,7 @@
     id="work"
     title="Work Experience"
     class="snap-start"
+    :style="$device.isDesktop ? '' : 'padding-top: calc(var(--header-height) + 1.5rem);'"
   >
     <PageWork />
   </ULandingSection>
@@ -38,6 +41,7 @@
     id="projects"
     title="Projects"
     class="snap-start"
+    :style="$device.isDesktop ? '' : 'padding-top: calc(var(--header-height) + 1.5rem);'"
   >
     <PageProjects />
   </ULandingSection>
@@ -46,6 +50,7 @@
     id="contact"
     title="Contact"
     class="snap-start"
+    :style="$device.isDesktop ? '' : 'padding-top: calc(var(--header-height) + 1.5rem);'"
   >
     <PageContact />
   </ULandingSection>

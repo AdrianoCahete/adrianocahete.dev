@@ -1,6 +1,6 @@
 <template>
   <div
-    class="nav-timeline_item"
+    :class="['nav-timeline_item', $device.isMobile ? ' nav-tl-mobile' : '']"
     :key="stringNormalize(companyName)"
     :id="stringNormalize(companyName, Index)"
   >
@@ -104,7 +104,7 @@
   .nav-timeline_item {
     display: flex;
     align-items: center;
-     padding-left: 50px; // TODO: Fix this on mobile
+    padding-left: 50px; // TODO: Fix this on mobile
     padding-bottom: 1rem;
     border-left: 1px solid var(--primaryColor); // TODO: Get from vars
     border-image: none;
@@ -143,6 +143,16 @@
       & .nav-timeline_item-dot {
         background-color: var(--primaryColor);
         transition: background-color 0.7s ease-in-out;
+      }
+    }
+
+    &.nav-tl-mobile {
+      &:first-of-type {
+        padding-top: 0;
+      }
+
+      .nav-timeline_item-dot {
+        margin-right: 10px;
       }
     }
   }
