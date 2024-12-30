@@ -1,6 +1,6 @@
 <template>
   <div :class="['contact-list', $device.isMobile ? 'contact-mobile' : '']">
-    <slot name="contactItem"></slot>
+    <slot name="contactItem" />
   </div>
 </template>
 
@@ -15,16 +15,14 @@
 </script>
 
 <style lang="scss" scoped>
-  .contact {
+  .contact-list {
     display: flex;
     flex-direction: column;
-    max-width: max-content; // TODO: Fix this on mobile
-    width: 80vw; // TODO: Fix this on mobile
     padding-top: 3rem;
     padding-bottom: 3rem;
 
-    &.contact-mobile {
-      padding-top: 0;
-    }
+    // &.contact-mobile {
+    //   padding-top: 0;
+    // }
   }
 </style>

@@ -2,11 +2,13 @@
   <div
     :class="['contact_item', $device.isMobile ? ' contact-mobile' : '']"
   >
+  <span>ué</span>
     <UButton
         class="p-2"
         :to="getUrlPerService(service)"
         :target="target"
         :icon="getIconPerService(service)"
+        :size="iconSize"
         :aria-label="service"
         color="black"
         variant="ghost"
@@ -32,6 +34,10 @@
     },
     iconColor: {
       type: String,
+      required: false,
+    },
+    iconSize: {
+      type: String as PropType<'sm' | 'md' | 'lg'>,
       required: false,
     },
     variant: {
