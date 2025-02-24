@@ -19,7 +19,7 @@ export default defineAppConfig({
       hero: {
         container: "gap-16 sm:gap-y-24 flex flex-col max-w-full",
         title:
-          "text-8xl font-bold tracking-tight sm:text-7xl text-gradient-main",
+          "text-8xl font-bold tracking-tight sm:text-7xl text-gradient-main drop-shadow-custom",
         description:
           "mt-2 text-lg tracking-tight text-gray-600 dark:text-gray-300",
       },

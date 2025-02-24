@@ -17,11 +17,19 @@
 <script lang="ts" setup>
   const workplaces = [
     {
+      jobName: "Senior FrontEnd Developer",
+      companyName: "OWSE - Objects Web & Software Engineering",
+      companyLogo: null,
+      startsOn: "Nov 2024",
+      endsOn: "Currently",
+      projectName: "",
+    },
+    {
       jobName: "Specialist FrontEnd Developer, Design Technologist & DesignOps",
       companyName: "Philips",
       companyLogo: null,
       startsOn: "Jun 2022",
-      endsOn: "Nov 2024",
+      endsOn: "Jan 2024",
       projectName: "",
     },
     {
@@ -66,5 +74,3 @@
     },
   ];
 </script>
-
-<style lang="scss"></style>

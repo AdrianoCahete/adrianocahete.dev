@@ -237,4 +237,14 @@
     transition: font-size 0.5s ease-in-out;
     font-weight: 600;
   }
+
+  .drop-shadow-custom {
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
+    transition: filter 0.5s ease-in-out;
+
+    &:hover {
+      filter: none;
+      transition: filter 0.5s ease-in-out;
+    }
+  }
 </style>
