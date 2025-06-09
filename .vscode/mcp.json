@@ -1,0 +1,9 @@
+// {
+//   "servers": {
+//     "nuxt": {
+//       "type": "stdio",
+//       "command": "npx",
+//       "args": ["--yes", "mcp-remote", "https://mcp.nuxt.com/sse"]
+//     }
+//   }
+// }
