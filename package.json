@@ -35,7 +35,7 @@
     "@inspira-ui/plugins": "^0.0.1",
     "@nuxt/eslint-config": "^1.4.1",
     "@nuxt/fonts": "^0.11.4",
-    "@nuxtjs/device": "^3.2.4",
+    "@nuxtjs/device": "^4.0.0",
     "clsx": "^2.1.1",
     "eslint": "^9.28.0",
     "nuxt": "^3.17.5",
