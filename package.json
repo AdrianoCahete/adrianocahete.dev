@@ -37,7 +37,7 @@
     "@nuxt/fonts": "^0.11.4",
     "@nuxtjs/device": "^3.2.4",
     "clsx": "^2.1.1",
-    "eslint": "^9.28.0",
+    "eslint": "^10.10.0",
     "nuxt": "^3.17.5",
     "sass": "^1.89.1",
     "tailwind-merge": "^3.3.0",
