@@ -29,7 +29,7 @@
     "@vueuse/motion": "^3.0.3",
     "@vueuse/nuxt": "^13.3.0",
     "change-case": "^5.4.4",
-    "nuxt-i18n-micro": "^1.87.0"
+    "nuxt-i18n-micro": "^3.28.5"
   },
   "devDependencies": {
     "@inspira-ui/plugins": "^0.0.1",
