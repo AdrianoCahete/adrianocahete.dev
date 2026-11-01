@@ -1,40 +1,51 @@
-<script setup>
-  useHead({
-    meta: [
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-    ],
-    link: [{ rel: "icon", href: "/favicon.ico" }],
-    htmlAttrs: {
-      lang: "en",
-    },
-  });
-
-  const title = "Adriano Cahete";
-  const description =
-    "Adriano Cahete | FrontEnd Developer, Design Technologist & DesignOps";
-  const socialImage = "https://adrianocahete.dev/assets/social-card.png";
-
-  useSeoMeta({
-    title,
-    description,
-    ogTitle: title,
-    ogDescription: description,
-    ogImage: socialImage,
-    twitterImage: socialImage,
-    twitterCard: "summary_large_image",
-  });
-</script>
-
 <template>
-  <NuxtLoadingIndicator />
+  <!-- <NuxtLoadingIndicator />
   <NuxtLayout>
     <NavHeader />
     <UMain>
       <NuxtPage />
     </UMain>
     <NavFooter />
-  </NuxtLayout>
+  </NuxtLayout> -->
+  <UApp>
+    <NavHeader />
+    <NuxtPage />
+  </UApp>
 </template>
+
+<script setup>
+  import { profile } from "~/lib/profile";
+
+  useHead({
+    meta: [
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+    ],
+    link: [
+      { rel: "icon", href: "/favicon.ico" },
+      { rel: "alternate", type: "text/plain", href: "/llms.txt", title: "Portfolio overview for AI assistants" },
+      { rel: "alternate", type: "text/plain", href: "/llms-full.txt", title: "Detailed portfolio for AI assistants" },
+    ],
+    htmlAttrs: {
+      lang: "en",
+    },
+  });
+
+  useSeoMeta({
+    title: profile.title,
+    description: profile.description,
+    ogTitle: profile.title,
+    ogDescription: profile.description,
+    ogSiteName: profile.name,
+    ogType: "website",
+    ogImage: profile.socialImage,
+    ogImageAlt: "Adriano Cahete - Design Technologist & DesignOps",
+    twitterTitle: profile.title,
+    twitterDescription: profile.description,
+    twitterImage: profile.socialImage,
+    twitterImageAlt: "Adriano Cahete - Design Technologist & DesignOps",
+    twitterCard: "summary_large_image",
+  });
+</script>
 
 <style lang="scss">
   /*!

@@ -3,6 +3,8 @@
 </template>
 
 <script setup>
+useSeoMeta({ robots: "noindex, nofollow" });
+
 useHead({
   title: "",
   bodyAttrs: {
@@ -10,7 +12,5 @@ useHead({
   },
 });
 </script>
-
-<script lang="ts" setup></script>
 
 <style lang="scss" scoped></style>

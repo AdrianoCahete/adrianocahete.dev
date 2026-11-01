@@ -20,10 +20,41 @@
       developers, creating a better design/developer experience (DX) and
       implementing DesignOps and GitOps practices.
     </p>
+
+    <section
+      id="profile-questions"
+      aria-labelledby="profile-questions-title"
+      class="mt-8 scroll-mt-24 border-t border-default pt-6 hidden"
+    >
+      <h3 id="profile-questions-title" class="text-lg font-semibold text-highlighted">
+        Profile questions
+      </h3>
+      <dl class="mt-4 grid gap-6 sm:grid-cols-2">
+        <div v-for="question in profileQuestions" :key="question.id">
+          <dt :id="`question-${question.id}`" class="scroll-mt-24 font-medium text-highlighted">
+            {{ question.question }}
+          </dt>
+          <dd class="mt-1 text-sm text-muted">
+            {{ question.answer }}
+            <a
+              v-if="question.link"
+              :href="question.link.href"
+              target="_blank"
+              rel="me noopener noreferrer"
+              class="text-primary underline underline-offset-4"
+            >
+              View {{ question.link.title }} profile
+            </a>
+          </dd>
+        </div>
+      </dl>
+    </section>
   </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+  import { profileQuestions } from "~/lib/profile";
+</script>
 
 <style lang="scss" scoped>
 .about-me > p {

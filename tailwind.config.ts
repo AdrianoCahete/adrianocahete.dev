@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-import * as defaultTheme from "tailwindcss/defaultTheme";
+import defaultTheme from "tailwindcss/defaultTheme";
 import * as animate from "tailwindcss-animate";
 import { setupInspiraUI } from "@inspira-ui/plugins";
 

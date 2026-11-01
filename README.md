@@ -1,13 +1,15 @@
 # adrianocahete.dev
 
-[My portfolio](https://adrianocahete.dev) on Nuxt 3 + Nuxt UI (Pro)
+[My portfolio](https://adrianocahete.dev) on Nuxt 4 + Nuxt UI 4 + Tailwind CSS 4.
 
 ## Setup
 
-Make sure to install the dependencies:
+Use Node.js 24.15.0 (see `.nvmrc`) or another version supported by `engines.node` in `package.json`.
+
+Install the locked dependencies:
 
 ```bash
-npm install
+npm ci
 ```
 
 ## Development Server
@@ -17,6 +19,29 @@ Start the development server on `http://localhost:3000`:
 ```bash
 npm run dev
 ```
+
+Before publishing, run `npm run lint`, `npm run typecheck` and `npm run build`.
+Use `npm run generate` for a static build.
+
+The existing root-level Vue directories are retained with `srcDir: "."`.
+Nuxt UI 4 includes the former Pro components and does not require a license.
+
+## Search and AI discovery
+
+`nuxt-llms`, `@nuxtjs/robots` and `@nuxtjs/sitemap` generate `/llms.txt`,
+`/robots.txt` and `/sitemap.xml`, including in the static build.
+Public search and AI crawlers can access the portfolio. `/admin` has `noindex`
+and is excluded from the sitemap.
+
+Update `lib/profile.ts` for the shared profile metadata, social profiles and
+Schema.org data. The homepage includes a canonical URL and `Person`, `WebSite`
+and `ProfilePage` JSON-LD. Discovery content must not contain a public email or PDF.
+
+The About section also renders profile questions and answers from `lib/profile.ts`.
+The same answers populate the FAQ JSON-LD and `/llms.txt`.
+`/llms-full.txt` includes these answers, work experience, projects and interfaces;
+`server/plugins/llms.ts` generates it from the same data used by the visible page
+in `lib/portfolio.ts`.
 
 ## Production
 

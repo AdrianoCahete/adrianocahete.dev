@@ -8,40 +8,52 @@
   },
   "private": true,
   "type": "module",
+  "engines": {
+    "node": "^22.22.3 || ^24.15.0 || >=26.0.0"
+  },
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev --logLevel=verbose",
+    "dev": "nuxt dev",
+    "dev:verbose": "nuxt dev --logLevel=verbose",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
     "typecheck": "nuxt typecheck",
-    "update": "npx --yes npm-check-updates && npx --yes npm-check-updates -u && npx nuxi upgrade"
+    "update:nuxt": "nuxt upgrade --dedupe",
+    "update:all": "npx --yes npm-check-updates -u && npm install && nuxt upgrade --dedupe"
   },
   "dependencies": {
-    "@iconify-json/heroicons": "^1.2.2",
+    "@iconify-json/heroicons": "^1.2.3",
     "@iconify-json/mdi": "^1.2.3",
-    "@iconify-json/simple-icons": "^1.2.38",
-    "@nuxt/ui-pro": "^3.1.3",
-    "@vueuse/components": "^13.3.0",
-    "@vueuse/core": "^13.3.0",
-    "@vueuse/integrations": "^13.3.0",
+    "@iconify-json/simple-icons": "^1.2.101",
+    "@nuxt/ui": "^4.12.0",
+    "@nuxtjs/robots": "^7.0.2",
+    "@nuxtjs/sitemap": "^9.1.0",
+    "@vueuse/components": "^15.0.0",
+    "@vueuse/core": "^15.0.0",
+    "@vueuse/integrations": "^15.0.0",
     "@vueuse/motion": "^3.0.3",
-    "@vueuse/nuxt": "^13.3.0",
+    "@vueuse/nuxt": "^15.0.0",
     "change-case": "^5.4.4",
-    "nuxt-i18n-micro": "^1.87.0"
+    "nuxt-i18n-micro": "^3.30.3",
+    "nuxt-llms": "^0.3.1",
+    "tailwindcss": "^4.3.3",
+    "vue": "^3.5.44"
   },
   "devDependencies": {
-    "@inspira-ui/plugins": "^0.0.1",
-    "@nuxt/eslint-config": "^1.4.1",
-    "@nuxt/fonts": "^0.11.4",
-    "@nuxtjs/device": "^3.2.4",
+    "@inspira-ui/plugins": "^0.0.2",
+    "@nuxt/eslint-config": "^1.17.0",
+    "@nuxt/fonts": "^1.2.0",
+    "@nuxtjs/device": "^4.0.0",
     "clsx": "^2.1.1",
-    "eslint": "^9.28.0",
-    "nuxt": "^3.17.5",
-    "sass": "^1.89.1",
-    "tailwind-merge": "^3.3.0",
+    "eslint": "^10.14.0",
+    "nuxt": "^4.6.3",
+    "nuxt-site-config": "^5.0.3",
+    "sass": "^1.107.1",
+    "tailwind-merge": "^3.7.0",
     "tailwindcss-animate": "^1.0.7",
-    "vue-tsc": "^2.2.10"
+    "typescript": "^6.0.3",
+    "vue-tsc": "^3.3.14"
   }
 }

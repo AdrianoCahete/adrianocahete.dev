@@ -1,18 +1,17 @@
 <template>
   <svg
-    v-if="$device.isDesktop"
     ref="svgRef"
     width="100%"
     height="100%"
     viewBox="0 0 530 100"
     xmlns="http://www.w3.org/2000/svg"
+    class="select-none overflow-visible w-full"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
     @mousemove="handleMouseMove"
     @touchstart="handleTouchStart"
     @touchmove="handleTouchMove"
     @touchend="handleTouchEnd"
-    class="select-none overflow-visible w-full min-lg:min-h-64"
   >
     <defs>
       <linearGradient
@@ -23,29 +22,29 @@
         r="25%"
       >
         <stop
+          v-if="hovered"
           offset="0%"
           stop-color="var(--yellow-500)"
-          v-if="hovered"
         />
         <stop
+          v-if="hovered"
           offset="25%"
           stop-color="var(--red-500)"
-          v-if="hovered"
         />
         <stop
+          v-if="hovered"
           offset="50%"
           stop-color="var(--blue-500)"
-          v-if="hovered"
         />
         <stop
+          v-if="hovered"
           offset="75%"
           stop-color="var(--cyan-500)"
-          v-if="hovered"
         />
         <stop
+          v-if="hovered"
           offset="100%"
           stop-color="var(--violet-500)"
-          v-if="hovered"
         />
       </linearGradient>
 
@@ -144,11 +143,6 @@
       {{ text }}
     </text>
   </svg>
-  <span
-    v-else
-    class="select-none overflow-visible w-full min-lg:min-h-64"
-    >{{ text }}</span
-  >
 </template>
 
 <script setup lang="ts">
@@ -196,6 +190,9 @@
   const maskPosition = computed(() => {
     if (svgRef.value) {
       const svgRect = svgRef.value.getBoundingClientRect();
+      if (!svgRect.width || !svgRect.height) {
+        return { cx: "50%", cy: "50%" };
+      }
       const cxPercentage = ((cursor.x - svgRect.left) / svgRect.width) * 100;
       const cyPercentage = ((cursor.y - svgRect.top) / svgRect.height) * 100;
       return { cx: `${cxPercentage}%`, cy: `${cyPercentage}%` };
@@ -226,6 +223,7 @@
 
   const handleTouchMove = (e: TouchEvent) => {
     const touch = e.touches[0];
+    if (!touch) return;
     cursor.x = touch.clientX;
     cursor.y = touch.clientY;
   };

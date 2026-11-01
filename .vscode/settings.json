@@ -3,7 +3,7 @@
     "source.fixAll.eslint": "explicit"
   },
   "files.associations": {
-    "*.css": "tailwindcss"
+    "*.css": "css"
   },
   "editor.quickSuggestions": {
     "strings": true
@@ -16,5 +16,11 @@
   "spellright.language": ["en"],
   "spellright.documentTypes": ["markdown", "latex", "plaintext"],
   "typescript.tsdk": "node_modules\\typescript\\lib",
-  "chat.mcp.discovery.enabled": true
+  "chat.mcp.discovery.enabled": {
+    "claude-desktop": true,
+    "copilot": true,
+    "windsurf": true,
+    "cursor-global": true,
+    "cursor-workspace": true
+  }
 }

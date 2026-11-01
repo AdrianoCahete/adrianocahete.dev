@@ -4,10 +4,10 @@
       Last update: {{ new Date().getFullYear() }}.{{
         new Date().getMonth() + 1
       }}
-      <span v-if="$config.public.version">- v{{ $config.public.version }}</span>
+      <span v-if="$config.public.pkgVersion">- v{{ $config.public.pkgVersion }}</span>
     </template>
     <template #right>
-      Made with <span class="spotlight text-gradient">Nuxt 3</span> + <span class="spotlight text-gradient">NuxtUI Pro</span> + <span class="spotlight text-gradient">Tailwind</span>
+      Made with <span class="spotlight text-gradient">Nuxt 4</span> + <span class="spotlight text-gradient">Nuxt UI</span> + <span class="spotlight text-gradient">Tailwind</span>
     </template>
   </UFooter>
 </template>

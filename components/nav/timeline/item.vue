@@ -1,11 +1,11 @@
 <template>
   <div
-    :class="['nav-timeline_item', $device.isMobile ? ' nav-tl-mobile' : '']"
+    :id="stringNormalize(companyName, index)"
     :key="stringNormalize(companyName)"
-    :id="stringNormalize(companyName, Index)"
+    class="nav-timeline_item"
   >
-    <div class="nav-timeline_item-dot"></div>
-    <ULandingCard
+    <div class="nav-timeline_item-dot"/>
+    <UPageCard
       :title="jobName"
       :description="companyName"
       color="primary"
@@ -48,15 +48,16 @@
           {{ projectName }}
         </NuxtLink>
       </div>
-    </ULandingCard>
+    </UPageCard>
   </div>
 </template>
 
 <script lang="ts" setup>
   defineProps({
-    Index: {
+    index: {
       type: Number,
       required: false,
+      default: -1,
     },
     companyName: {
       type: String,
@@ -146,7 +147,7 @@
       }
     }
 
-    &.nav-tl-mobile {
+    @media (width < 1024px) {
       &:first-of-type {
         padding-top: 0;
       }

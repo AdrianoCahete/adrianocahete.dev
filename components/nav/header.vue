@@ -1,21 +1,22 @@
 <template>
   <UHeader
-    :links="links"
-    to="#start"
+    to="/#start"
   >
-    <template #logo>
-      <DevOnly>[Dev]</DevOnly>
+    <template #title>
       Adriano Cahete
+      <DevOnly>[Dev Env]</DevOnly>
     </template>
 
+    <UNavigationMenu :items="links" />
+
     <template #right>
-      <UColorModeToggle />
+      <NavColorModeButton />
       <UButton
         to="https://linkedin.com/in/AdrianoCahete"
         target="_blank"
         icon="i-simple-icons-linkedin"
         aria-label="LinkedIn"
-        color="black"
+        color="neutral"
         variant="ghost"
         class="hidden md:flex"
       />
@@ -24,7 +25,7 @@
         target="_blank"
         icon="i-simple-icons-github"
         aria-label="GitHub"
-        color="black"
+        color="neutral"
         variant="ghost"
         class="hidden md:flex"
       />
@@ -33,25 +34,18 @@
         target="_blank"
         icon="i-simple-icons-behance"
         aria-label="Behance"
-        color="black"
-        variant="ghost"
-        class="hidden md:flex"
-      />
-      <UButton
-        to="https://adrianocahete.dev/assets/[en-US]-Adriano_Cahete.pdf"
-        target="_blank"
-        icon="i-simple-icons-googledocs"
-        aria-label="PDF Resume"
-        color="black"
+        color="neutral"
         variant="ghost"
         class="hidden md:flex"
       />
     </template>
 
-    <template #panel>
-      <UAsideLinks
-        :links="links"
-        :class="$device.isMobile ? 'bg-white pb-2 px-5 -mx-4 -mt-4 pt-4 border-b border-t-0 drop-shadow-lg' : ''" />
+    <template #body>
+      <UNavigationMenu
+        :items="links"
+        orientation="vertical"
+        class="-mx-2.5"
+      />
     </template>
   </UHeader>
 </template>
@@ -70,60 +64,46 @@
   const links = [
     {
       label: "About",
-      to: "#about",
+      to: "/#about",
       exactHash: true,
       exactActiveClass: "nav-active",
       activeClass: "nav-active",
     },
     {
       label: "Work",
-      to: "#work",
+      to: "/#work",
       exactHash: true,
       exactActiveClass: "nav-active",
       activeClass: "nav-active",
     },
     {
       label: "Projects",
-      to: "#projects",
+      to: "/#projects",
       exactHash: true,
       exactActiveClass: "nav-active",
       activeClass: "nav-active",
     },
     {
       label: "Contact",
-      to: "#contact",
+      to: "/#contact",
       exactHash: true,
       exactActiveClass: "nav-active",
       activeClass: "nav-active",
     },
   ];
 
-  const headerButtons = [
-    {
-      label: "About",
-      to: "#about",
-      exactHash: true,
-    },
-    {
-      label: "Work",
-      to: "#work",
-      exactHash: true,
-    },
-    {
-      label: "Projects",
-      to: "#projects",
-      exactHash: true,
-    },
-    {
-      label: "Contact",
-      to: "#contact",
-      exactHash: true,
-    },
-  ];
 </script>
 
 <style lang="scss">
   .header-background-gradient {
+    --ui-text: var(--navColorActive);
+    --ui-text-muted: var(--navColor);
+    --ui-text-toned: var(--navColorActive);
+    --ui-text-highlighted: var(--navColorActive);
+    --ui-primary: var(--navColorActive);
+    --ui-bg-elevated: rgba(255, 255, 255, 0.14);
+    --ui-bg-accented: rgba(255, 255, 255, 0.18);
+
     background: var(--navbarBgColor);
     color: #fff;
   }

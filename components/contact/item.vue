@@ -10,9 +10,9 @@
         :icon="getIconPerService(service)"
         :size="iconSize"
         :aria-label="service"
-        color="black"
+        color="neutral"
         variant="ghost"
-        :rel="itsMe"
+        :rel="itsMe ? 'me' : undefined"
       />
   </div>
 </template>
@@ -35,10 +35,12 @@
     iconColor: {
       type: String,
       required: false,
+      default: undefined,
     },
     iconSize: {
       type: String as PropType<'sm' | 'md' | 'lg'>,
       required: false,
+      default: "md",
     },
     variant: {
       type: String,
@@ -60,14 +62,8 @@
       case "github":
         return "i-simple-icons-github";
 
-      case "email":
-        return "i-simple-icons-gmail";
-
       case "behance":
         return "i-simple-icons-behance";
-
-      case "resume":
-        return "i-simple-icons-whatsapp";
 
       default:
         return "no-icon";
@@ -82,14 +78,8 @@
       case "github":
         return "https://github.com/AdrianoCahete";
 
-      case "email":
-        return "me@adrianocahete.dev";
-
       case "behance":
         return "https://www.behance.net/AdrianoCahete/";
-
-      case "resume":
-        return "https://adrianocahete.dev/assets/Adriano_Cahete.pdf";
 
       default:
         return "no-url";

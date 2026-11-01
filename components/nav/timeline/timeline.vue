@@ -1,6 +1,6 @@
 <template>
-  <div :class="['nav-timeline', isCenter ? ' nav-tl-center' : '', $device.isMobile ? 'nav-tl-mobile' : '']">
-    <slot name="timelineitem"></slot>
+  <div :class="['nav-timeline', { 'nav-tl-center': isCenter }]">
+    <slot name="timelineitem"/>
   </div>
 </template>
 
@@ -28,7 +28,7 @@
       margin-right: auto;
     }
 
-    &.nav-tl-mobile {
+    @media (width < 1024px) {
       padding-top: 0;
     }
   }
