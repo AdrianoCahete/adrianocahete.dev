@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import pkg from "./package.json";
 import { profile, profileQuestions } from "./lib/profile";
+import pkg from "./package.json";
 
 export default defineNuxtConfig({
   srcDir: ".",
@@ -31,6 +31,12 @@ export default defineNuxtConfig({
     exclude: ["/admin", "/admin/**"],
   },
 
+  router: {
+    options: {
+      scrollBehaviorType: "smooth",
+    },
+  },
+
   routeRules: {
     "/admin": { robots: false, sitemap: false },
     "/admin/**": { robots: false, sitemap: false },
@@ -42,23 +48,52 @@ export default defineNuxtConfig({
     description: profile.description,
     full: {
       title: "Detailed portfolio",
-      description: "Profile, professional experience, projects and answers to common questions.",
+      description:
+        "Profile, professional experience, projects and answers to common questions.",
     },
     sections: [
       {
         title: "Portfolio",
-        description: "Adriano works across frontend development, interaction design, motion, UX and UI, bridging design and development through DesignOps and GitOps practices.",
+        description:
+          "Adriano works across frontend development, interaction design, motion, UX and UI, bridging design and development through DesignOps and GitOps practices.",
         links: [
-          { title: "About", href: `${profile.url}#about`, description: "Professional background, skills and approach to building digital products." },
-          { title: "Profile questions", href: `${profile.url}#profile-questions`, description: "Direct answers about specialties, technologies, location and contact." },
-          { title: "Work Experience", href: `${profile.url}#work`, description: "Career history with roles, employers and employment periods, starting with the most recent position." },
-          { title: "Projects and Interfaces", href: `${profile.url}#projects`, description: "Open source contributions, frontend projects and public interface design work." },
-          { title: "Contact", href: `${profile.url}#contact`, description: "Public professional profiles. Use LinkedIn to get in touch." },
+          {
+            title: "About",
+            href: `${profile.url}#about`,
+            description:
+              "Professional background, skills and approach to building digital products.",
+          },
+          {
+            title: "Profile questions",
+            href: `${profile.url}#profile-questions`,
+            description:
+              "Direct answers about specialties, technologies, location and contact.",
+          },
+          {
+            title: "Work Experience",
+            href: `${profile.url}#work`,
+            description:
+              "Career history with roles, employers and employment periods, starting with the most recent position.",
+          },
+          {
+            title: "Projects and Interfaces",
+            href: `${profile.url}#projects`,
+            description:
+              "Open source contributions, frontend projects and public interface design work.",
+          },
+          {
+            title: "Contact",
+            href: `${profile.url}#contact`,
+            description:
+              "Public professional profiles. Use LinkedIn to get in touch.",
+          },
         ],
       },
       {
         title: "Quick answers",
-        description: profileQuestions.map(({ question, answer }) => `### ${question}\n\n${answer}`).join("\n\n"),
+        description: profileQuestions
+          .map(({ question, answer }) => `### ${question}\n\n${answer}`)
+          .join("\n\n"),
       },
       {
         title: "Professional profiles",
